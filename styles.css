@@ -285,7 +285,7 @@ a {
   width: 100%;
   margin: 0;
   display: block;
-  padding: 0;
+  padding: 62px 0 86px;
 }
 
 .hero-copy {
@@ -293,7 +293,10 @@ a {
   z-index: 2;
   width: min(530px, calc(100% - 48px));
   margin-left: max(24px, calc((100vw - 1120px) / 2));
-  padding: 62px 0 86px;
+}
+
+.hero-copy-secondary {
+  margin-top: 6px;
 }
 
 .eyebrow,
@@ -1180,7 +1183,7 @@ a {
     display: none;
   }
 
-  /* stacked hero: copy on paper, photo fully visible below */
+  /* stacked hero: title → photo → detail + CTA */
   .hero {
     display: flex;
     flex-direction: column;
@@ -1192,16 +1195,18 @@ a {
   }
 
   .hero-shell {
-    order: 1;
-    width: min(100% - 32px, 640px);
-    margin: 0 auto;
-    padding: 44px 0 48px;
+    display: contents;
   }
 
   .hero-copy {
-    width: 100%;
-    margin: 0;
+    width: min(100% - 40px, 620px);
+    margin: 0 auto;
     padding: 0;
+  }
+
+  .hero-copy:not(.hero-copy-secondary) {
+    order: 1;
+    padding: 40px 0 28px;
   }
 
   .hero-media {
@@ -1209,9 +1214,15 @@ a {
     order: 2;
     width: 100%;
     height: auto;
-    aspect-ratio: 4 / 3;
+    aspect-ratio: 5 / 4;
     object-fit: cover;
-    object-position: 62% 48%;
+    object-position: 60% 46%;
+  }
+
+  .hero-copy-secondary {
+    order: 3;
+    margin-top: 0;
+    padding: 34px 0 46px;
   }
 
   .statement-layout,
@@ -1261,12 +1272,16 @@ a {
     font-size: 0.8rem;
   }
 
-  .hero-shell {
-    padding: 38px 0 44px;
+  .hero-copy:not(.hero-copy-secondary) {
+    padding: 30px 0 24px;
   }
 
   .hero-media {
-    aspect-ratio: 4 / 3.2;
+    aspect-ratio: 1 / 1;
+  }
+
+  .hero-copy-secondary {
+    padding: 30px 0 40px;
   }
 
   .hero-lead {
