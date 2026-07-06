@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="酵善">
+  <rect width="64" height="64" rx="8" fill="#fbfaf7"/>
+  <rect x="8" y="8" width="48" height="48" rx="4" fill="#26394e"/>
+  <text
+    x="32"
+    y="41"
+    text-anchor="middle"
+    font-size="28"
+    font-family="Hiragino Mincho ProN, Yu Mincho, serif"
+    fill="#fbfaf7"
+  >酵</text>
+</svg>
